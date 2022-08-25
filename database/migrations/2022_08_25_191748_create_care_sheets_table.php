@@ -27,6 +27,8 @@ return new class extends Migration
             $table->string('uvb');
             $table->string('breeding');
             $table->string('cleaning');
+            $table->string('slug');
+            $table->string('seo_description');
             $table->timestamps();
         });
     }
