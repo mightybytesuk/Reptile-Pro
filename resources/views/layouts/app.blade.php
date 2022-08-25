@@ -54,6 +54,9 @@
                             @endif
                         @else
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('care-sheets') }}">Care Sheets</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{route('create')}}">Add Listing</a>
                         </li>
                         <li class="nav-item">
