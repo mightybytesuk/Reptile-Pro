@@ -26,7 +26,6 @@ return new class extends Migration
             $table->string('heating');
             $table->string('uvb');
             $table->string('breeding');
-            $table->string('diet');
             $table->string('cleaning');
             $table->timestamps();
         });

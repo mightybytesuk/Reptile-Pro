@@ -20,7 +20,8 @@ use Illuminate\Support\Facades\Route;
 route::get('/', [IndexController::class, 'welcome']);
 
 //Care Sheet Routes
-Route::get('/care-sheets', [CareSheetController::class, 'view'])->name('care-sheets');
+Route::get('/care-sheets', [CareSheetController::class, 'list'])->name('care-sheets');
+Route::get('/create/care-sheets', [CareSheetController::class, 'create'])->name('create-caresheet');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
