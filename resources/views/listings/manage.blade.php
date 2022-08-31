@@ -20,7 +20,7 @@
             <td>{{$animal->category}}</td>
             <td>{{$animal->sex}}</td>
             <td>
-           <a href="">
+           <a href="{{route('delete', $animal->id)}}">
             <button class="btn btn-danger">
                 Delete
             </button>

@@ -36,7 +36,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
-                        
+
                         @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('care-sheets') }}">Care Sheets</a>

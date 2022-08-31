@@ -17,7 +17,10 @@ return new class extends Migration
             $table->id();
             $table->integer('admin')->default(0);
             $table->string('name');
-            $table->string('role')->nullable();
+            $table->string('role')->default(0);
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('website')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

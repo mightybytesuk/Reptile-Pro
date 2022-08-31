@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CareSheet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -21,8 +22,9 @@ class CareSheetController extends Controller
         return view('caresheets.create');
     }
 
-    public function store(Request $request)
+    public function store(Request $request, CareSheet $careSheet)
     {
+        $this->authorize('create', $careSheet);
         return($request->all());
     }
 }

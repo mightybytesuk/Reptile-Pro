@@ -36,5 +36,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/create', [AnimalController::class, 'create'])->middleware('auth')->name('create');
 Route::post('/create', [AnimalController::class, 'store'])->middleware('auth')->name('create');
+Route::get('/delete/{id}', [AnimalController::class, 'delete'])->middleware('auth')->name('delete');
 
 Route::get('/manage-listings', [AnimalController::class, 'viewAll'])->middleware('auth')->name('manage');

@@ -14,8 +14,11 @@ class AnimalController extends Controller
         return view('listings.create');
     }
 
-    public function store(Request $request)
+    public function store(Request $request, Animal $animal)
     {
+
+        $this->authorize('create', $animal);
+        
         $image = 'nothing';
 
         $animal = Animal::create([
@@ -31,6 +34,18 @@ class AnimalController extends Controller
             'age' => $request->age,
         ]);
         return redirect('/create');
+    }
+
+    public function delete(Request $request, Animal $animal)
+    {
+        
+        $animal = Animal::find($request->id);
+        
+        $this->authorize('delete', $animal);
+
+        $animal->delete();
+
+        return redirect()->back()->with('success', 'Animal Deleted');  
     }
 
     public function viewAll()
